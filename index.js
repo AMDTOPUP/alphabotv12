@@ -924,7 +924,7 @@ if (!m.isGroup) return reply(lang.groupOnly())
 			if (!['male', 'female', 'cewe', 'cowo', 'pria', 'wanita'].includes(genderx)) return reply(lang.genderReg(lang.ExReg(prefix)))
 			const cryptoRandomString = require('crypto-random-string');
 			let user = db.data.users[m.sender]
-			user.registered = false
+			user.registered = true
 			user.name = namax.trim()
 			user.age = umurx
 			user.gender = genderx
